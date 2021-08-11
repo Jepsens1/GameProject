@@ -48,9 +48,10 @@ namespace Game
                 case "3":
                     Console.Clear();
                     ShopMenu();
+                    MainMenu();
                     break;
                 case "4":
-                    Console.WriteLine(player.Eat());
+                    Environment.Exit(0);
                     break;
                 default:
                     break;

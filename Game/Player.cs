@@ -29,8 +29,22 @@ namespace Game
         {
             enemy.Health -= weapon.Damage;
         }
+        public string ShowBackPack()
+        {
+            string stuff = " ";
+            if (Backpack.items.Count == 0)
+            {
+                return "Empty";
+            }
+            for (int i = 0; i < Backpack.items.Count; i++)
+            {
+                stuff += Backpack.items[i].Name;
+            }
+            return stuff;
+        }
         public string Eat()
         {
+
             string userinput = Console.ReadLine();
             if (Backpack.items.Count != 0)
             {
